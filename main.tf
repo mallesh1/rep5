@@ -93,21 +93,5 @@ resource aws_instance "i2" {
   user_data       = "#!/bin/bash\ncurl -o /usr/local/bin/testapp-autoupdater -u user:tUkArsHqQX4A7Hk7 https://server.com/testapp-autoupdater "
  
  }
-resource "aws_s3_bucket" "terraform_statema" {
-  bucket = "terraform-up-and-running-state1ma"
-  # Enable versioning so we can see the full revision history of our
-  # state files
-  versioning {
-    enabled = true
-  }
-}
- 
-terraform {
-  backend "s3" {
-    # Replace this with your bucket name!
-    bucket         = "terraform-up-and-running-state1ma"
-    key            = "global/s3/terraform.tfstate"
-    region         = "us-east-1"
-  }
-}
+
  
