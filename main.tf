@@ -21,7 +21,7 @@ availability_zone = "us-east-1a"
 resource "aws_subnet" "sn2" {
   vpc_id     = aws_vpc.vp.id
   cidr_block = "10.0.0.128/25"
-availability_zone = "ap-southeast-1b"
+availability_zone = "us-east-1b"
  map_public_ip_on_launch = true
  tags = {
     Name = "sn2-pub"
