@@ -94,7 +94,7 @@ resource aws_instance "i2" {
  
  }
 resource "aws_s3_bucket" "terraform_statema" {
-  bucket = "terraform-up-and-running-state1@m"
+  bucket = "terraform-up-and-running-state1ma"
   # Enable versioning so we can see the full revision history of our
   # state files
   versioning {
