@@ -98,8 +98,8 @@ resource aws_instance "i2" {
 
   backend "s3" {
     bucket         = "test"
-    key            = "us-east-1/terraform.tfstate"
-    region         = "us-east-1"
+    key            ="$AWS_DEFAULT_REGION/terraform.tfstate"
+    region         = "$AWS_DEFAULT_REGION"
   }
 }
  
